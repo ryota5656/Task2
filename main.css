@@ -1,0 +1,17 @@
+.timer{
+  display: flex;
+  align-items:center;
+  margin: 20px;
+}
+.start{ 
+  padding: 10px;
+  width:100px;
+}
+.stop{ 
+  padding: 10px;
+  width:100px;
+}
+.reset{ 
+  padding: 10px;
+  width:100px;
+}
