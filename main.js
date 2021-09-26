@@ -34,12 +34,25 @@ window.addEventListener('DOMContentLoaded', function(){
     millisecondId = setInterval(function(){
      elapsedTimeMillisecond++;
      if(elapsedTimeMillisecond === 10){
+       elapsedTimeSecond++;
+       if (elapsedTimeSecond === 60) {
+         elapsedTimeMinute++;
+         if (elapsedTimeMinute === 60) {
+           elapsedTimeHour++;
+           writeHourTime();
+           elapsedTimeMinute =0;
+         }
+         writeMinuteTime();
+         elapsedTimeSecond =0;
+       }
+        writeSecondTime();
        elapsedTimeMillisecond =0;
      };
      writeMillsecondTime();
     },100);
     
-    secondId = setInterval(function(){
+    //以下コメント時間がずれてくのでボツ
+    /*secondId = setInterval(function(){
      elapsedTimeSecond++;
      if(elapsedTimeSecond === 10){
        elapsedTimeSecond =0;
@@ -49,7 +62,7 @@ window.addEventListener('DOMContentLoaded', function(){
     
     minuteId = setInterval(function(){
      elapsedTimeMinute++;
-     if(elapsedTimeMinute === 10){
+     if(elapsedTimeMinute === 60){
        elapsedTimeMinute =0;
      };
      writeMinuteTime();
@@ -62,7 +75,9 @@ window.addEventListener('DOMContentLoaded', function(){
      };
      writeHourTime();
     },100000);
+     */
   });
+ 
   
   
 　//ストップ
