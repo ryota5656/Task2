@@ -105,19 +105,16 @@ window.addEventListener('DOMContentLoaded', function(){
     //各時間に０を代入し表示
     clearInterval(millisecondId);
     elapsedTimeMillisecond = 0;
-    writeMillsecondTime();
-    
-    clearInterval(secondId);
     elapsedTimeSecond = 0;
-    writeSecondTime();
-    
-    clearInterval(minuteId);
     elapsedTimeMinute = 0;
-    writeMinuteTime();
-    
-    clearInterval(hourId);
     elapsedTimeHour = 0;
+    
+    writeMillsecondTime();
+    writeSecondTime();
+    writeMinuteTime();
     writeHourTime();
+    
+    
     
   });
 });
